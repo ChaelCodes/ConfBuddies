@@ -6,7 +6,7 @@ RSpec.describe EventsHelper, type: :helper do
   describe "#date_range" do
     subject { date_range(event) }
 
-    let(:event) { create :event }
+    let(:event) { create :event, end_at: "2021-11-10 00:00:00", start_at: "2021-11-08 00:00:00" }
 
     it { is_expected.to eq "November 08, 2021 - November 10, 2021" }
 
